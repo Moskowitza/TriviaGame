@@ -8,24 +8,29 @@
 </head>
 
 <body>
+  <!-- Start container, show at load -->
   <div id="start">
     <h1>Quiz Title</h1>
     <!-- Indicates a successful or positive action -->
     <button id="startBtn" type="button" class="btn btn-success btn-lg">start</button>
 
   </div>
+  <!-- Quiz container, hide at load -->
   <div id="quiz">
+    <!-- show countdown -->
     <div id="show-number"></div>
-    <!-- question 1 ENO-->
+    <!-- FORM name quiz -->
     <form name="quiz" action="">
+      <!-- question 1 ENO-->
+
       <p>Who is your favorite pet?</p>
       <input type="radio" name="question1" value="eno"> Eno
       <br>
-      <input type="radio" name="question1"value="toki"> Toki
+      <input type="radio" name="question1" value="toki"> Toki
       <br>
       <input type="radio" name="question1" value="blue"> Blue
       <br>
-    <!-- question 2 noBut-->
+      <!-- question 2 noBut-->
 
       <p>Do you like coffee?</p>
       <input type="radio" name="question2" value="yes"> yes
@@ -34,7 +39,7 @@
       <br>
       <input type="radio" name="question2" value="noBut"> no, but I'm an addict
       <br>
-    <!-- question 3 dog-->
+      <!-- question 3 dog-->
 
       <p>Who is the best assistant?</p>
       <input type="radio" name="question3" value="alfred"> Alfred
@@ -43,8 +48,8 @@
       <br>
       <input type="radio" name="question3" value="dog"> Dog
       <br>
-    <!-- question 3 mike-->
- 
+      <!-- question 3 mike-->
+
       <p>Who is a nunchuck master?</p>
       <input type="radio" name="question4" value="mike"> Michalangelo
       <br>
@@ -56,9 +61,11 @@
     </form>
     <p>
       <b>Note:</b> When a user clicks on a radio-button, it becomes checked, and all other radio-buttons with equal name become
-      unchecked.</p>
+      unchecked.
+    </p>
     <button id="done" type="button" class="btn btn-success btn-lg">I'm Done!</button>
   </div>
+  <!-- Results container, hide at load -->
   <div id="results">
     <h2 id="correct">Correct answers:</h2>
     <h2 id="wrong">Wrong answers:</h2>
@@ -66,14 +73,15 @@
     <button id="home" type="button" class="btn btn-success btn-lg">Return</button>
 
   </div>
-
-  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+<!-- my script -->
+  <script src="assets/javascript/app.js"></script>
+  <!-- jQuery from bootstraps -->
+  <!-- <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
     crossorigin="anonymous"></script>
-  <script src="/Users/macPRO/TriviaGame/assets/javascript/app.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
     crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script> -->
 
 </body>
 

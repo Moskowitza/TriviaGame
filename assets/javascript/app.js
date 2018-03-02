@@ -1,12 +1,3 @@
-// starts with a button click "start"
-//timer starts automatically demo has 30s, displayed at the top
-//quiz is multiple choice
-//ends when the timer hits zero
-//there is a DONE button
-//next screen, show correct answers, incorrect answers, AND not clicked
-
-//setTimeout(function, milliseconds)
-
 $(document).ready(function () {
     $("#quiz").hide();
     $("#results").hide();
@@ -24,32 +15,6 @@ $(document).ready(function () {
         clearInterval(intervalId);
         intervalId = setInterval(decrement, 1000);
     }
-    function getScore(form) {
-
-        var AnswersAndObjects = new Array();
-        AnswersAndObjects[0] = ["eno", form.question1];
-        AnswersAndObjects[1] = ["noBut", form.question2];
-        AnswersAndObjects[2] = ["dog", form.question3];
-        AnswersAndObjects[3] = ["mike", form.question4];
-        //correct answers
-        var theScore = 0;
-
-        for (i = 0; i < AnswersAndObjects.length; i++) {
-            currQuestionObject = AnswersAndObjects[i][1];
-            for (j = 0; j < currQuestionObject.length; j++) {
-                if (currQuestionObject[j].checked && currQuestionObject[j].value == AnswersAndObjects[i][0]) {
-                    theScore++;
-                    break;
-                }
-            }
-        }
-        //convert to percentage
-        theScore = Math.round(theScore / AnswersAndObjects.length * 100);
-
-        form.percentage.value = theScore + "%";
-    }
-
-    //  The decrement function.
     function decrement() {
         number--;
 
@@ -103,6 +68,6 @@ $("#startBtn").click(function () {
 $("#return").click(function () {
     $("#results").hide();
     $("#start").show();
-});
+});//end return to start
 
-});
+});//end document ready
