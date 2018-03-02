@@ -1,42 +1,60 @@
 <!DOCTYPE html>
 <html>
-  <head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-  <title>Trivia</title>
-  </head>
-<body>
-<div id="start">
-  <h1>Quiz Title</h1>
-  <!-- Indicates a successful or positive action -->
-<button type="button" class="btn btn-success btn-lg">start</button>
 
-</div>
-<div id="quiz">
-<form action="">
-    <p>Who is your favorite pet?</p>
-  <input type="radio" name="gender" value="male"> Eno<br>
-  <input type="radio" name="gender" value="female"> Toki<br>
-  <input type="radio" name="gender" value="other"> Blue
-</form>
-<form action="">
-        <p>Do you like coffee?</p>
-      <input type="radio" name="gender" value="male"> yes<br>
-      <input type="radio" name="gender" value="female">no<br>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+    crossorigin="anonymous">
+  <title>Trivia</title>
+</head>
+
+<body>
+  <div id="start">
+    <h1>Quiz Title</h1>
+    <!-- Indicates a successful or positive action -->
+    <button id="startBtn" type="button" class="btn btn-success btn-lg">start</button>
+
+  </div>
+  <div id="quiz">
+    <div id="show-number"></div>
+    <!-- question 1 -->
+    <form action="">
+      <p>Who is your favorite pet?</p>
+      <input type="radio" name="gender" value="male"> Eno
+      <br>
+      <input type="radio" name="gender" value="female"> Toki
+      <br>
+      <input type="radio" name="gender" value="other"> Blue
+    </form>
+    <!-- question 2 -->
+    <form action="">
+      <p>Do you like coffee?</p>
+      <input type="radio" name="gender" value="male"> yes
+      <br>
+      <input type="radio" name="gender" value="female">no
+      <br>
       <input type="radio" name="gender" value="other"> no, but I'm an addict
     </form>
-    <button type="button" class="btn btn-success btn-lg">I'm Done!</button>
-
+    <p>
+      <b>Note:</b> When a user clicks on a radio-button, it becomes checked, and all other radio-buttons with equal name become
+      unchecked.</p>
+    <button id="done" type="button" class="btn btn-success btn-lg">I'm Done!</button>
   </div>
   <div id="results">
     <h2 id="correct">Correct answers:</h2>
     <h2 id="wrong">Wrong answers:</h2>
     <h2 id="unanswered">Unanswered answers:</h2>
+    <button id="home" type="button" class="btn btn-success btn-lg">Return</button>
+
   </div>
-    
-<p><b>Note:</b> When a user clicks on a radio-button, it becomes checked, and all other radio-buttons with equal name become unchecked.</p>
+
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+    crossorigin="anonymous"></script>
+  <script src="/Users/macPRO/TriviaGame/assets/javascript/app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+    crossorigin="anonymous"></script>
 
 </body>
-</html>
 
+</html>
