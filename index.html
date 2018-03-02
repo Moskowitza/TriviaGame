@@ -24,40 +24,40 @@
       <!-- question 1 ENO-->
 
       <p>Who is your favorite pet?</p>
-      <input type="radio" name="question1" value="eno"> Eno
+      <input type="radio" name="question1" value="correct"> Eno
       <br>
-      <input type="radio" name="question1" value="toki"> Toki
+      <input type="radio" name="question1" value="wrong"> Toki
       <br>
-      <input type="radio" name="question1" value="blue"> Blue
+      <input type="radio" name="question1" value="wrong"> Blue
       <br>
       <!-- question 2 noBut-->
 
       <p>Do you like coffee?</p>
-      <input type="radio" name="question2" value="yes"> yes
+      <input type="radio" name="question2" value="wrong"> yes
       <br>
-      <input type="radio" name="question2" value="no"> no
+      <input type="radio" name="question2" value="wrong"> no
       <br>
-      <input type="radio" name="question2" value="noBut"> no, but I'm an addict
+      <input type="radio" name="question2" value="correct"> no, but I'm an addict
       <br>
       <!-- question 3 dog-->
 
       <p>Who is the best assistant?</p>
-      <input type="radio" name="question3" value="alfred"> Alfred
+      <input type="radio" name="question3" value="wrong"> Alfred
       <br>
-      <input type="radio" name="question3" value="siri"> Siri
+      <input type="radio" name="question3" value="wrong"> Siri
       <br>
-      <input type="radio" name="question3" value="dog"> Dog
+      <input type="radio" name="question3" value="correct"> Dog
       <br>
       <!-- question 3 mike-->
 
-      <p>Who is a nunchuck master?</p>
-      <input type="radio" name="question4" value="mike"> Michalangelo
+      <p>Who is a nunchaku master?</p>
+      <input type="radio" name="question4" value="correct"> Michalangelo
       <br>
-      <input type="radio" name="question4" value="seagal"> Steven Seagal
+      <input type="radio" name="question4" value="wrong"> Steven Seagal
       <br>
-      <input type="radio" name="question4" value="kathy"> Kathy Ireland
+      <input type="radio" name="question4" value="wrong"> Kathy Ireland
       <br>
-      <input type="radio" name="question4" value="snoop"> Snoop Dogg
+      <input type="radio" name="question4" value="wrong"> Snoop Dogg
     </form>
     <p>
       <b>Note:</b> When a user clicks on a radio-button, it becomes checked, and all other radio-buttons with equal name become
@@ -67,22 +67,23 @@
   </div>
   <!-- Results container, hide at load -->
   <div id="results">
-    <h2 id="correct">Correct answers:</h2>
+    <h2 id="correct"></h2>
     <h2 id="wrong">Wrong answers:</h2>
     <h2 id="unanswered">Unanswered answers:</h2>
-    <button id="home" type="button" class="btn btn-success btn-lg">Return</button>
+    <button id="return" type="button" class="btn btn-success btn-lg">Return</button>
 
   </div>
-<!-- my script -->
-  <script src="assets/javascript/app.js"></script>
-  <!-- jQuery from bootstraps -->
-  <!-- <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+
+
+  <!-- jQuery from bootstraps --> 
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
     crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
-    crossorigin="anonymous"></script> -->
-
+    crossorigin="anonymous"></script>
+    <!-- my script *AFTER jQUERY* -->
+    <script src="file:///Users/aaronmoskowitz/TriviaGame/assets/javascript/app.js"></script>
 </body>
 
 </html>
