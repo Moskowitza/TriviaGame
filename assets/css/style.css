@@ -1,0 +1,26 @@
+h1{
+    text-align: center;
+}
+p{
+    background-blend-mode: color-burn;
+}
+body{
+    background-image: url("/Users/aaronmoskowitz/TriviaGame/assets/images/guitars.jpg");
+}
+div{
+    background-color: sandybrown;
+    float: none;
+    padding-top: 50px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+    border-radius: 25px;
+    width: auto;
+}
+button{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+}

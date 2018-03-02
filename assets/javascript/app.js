@@ -1,6 +1,10 @@
 $(document).ready(function () {
     $("#quiz").hide(); //hide these divs on load
     $("#results").hide();
+   var numRight = 0; //set right, wrong, unasnwered to zero
+   var numWrong = 0;
+   var numUnans = 0;
+   var progress = 0;
     // var numRight = 0;
     var number = 100;     //  Set our countdown timer to 100.
 
@@ -17,7 +21,7 @@ $(document).ready(function () {
     function decrementTimer() {
         number--;
 
-        $("#show-number").html("<h2>" + number + "</h2>");
+        $("#show-number").html("You have " + number + " seconds left");
 
 
         //  Once number hits zero...
@@ -25,13 +29,10 @@ $(document).ready(function () {
 
             //  ...run the stop function.
             stopTimer();
-
-            //  Alert the user that time is up.
-            alert("Time Up!");
         }
     }
 
-    //  The stop function
+    //  The When Time is up run same as DONE button
     function stopTimer() {
         $("#start").hide();
         $("#quiz").hide();
@@ -55,10 +56,12 @@ $(document).ready(function () {
         numRight = 0; //set right, wrong, unasnwered to zero
         numWrong = 0;
         numUnans = 0;
+        progress = 0;
         for (i = 0; i < 5; i++) { //while 'i' is less than the number of questions in our quiz
             var radios = document.getElementsByName('question' + i); //get questions and store them in 
             for (var j = 0; j < radios.length; j++) {
                 var radio = radios[j];
+                progress++;
                 if (radio.value == "correct" && radio.checked) {
                     numRight++; //add score
                 } else if (radio.value == "wrong" && radio.checked) {
@@ -67,14 +70,16 @@ $(document).ready(function () {
                 numUnans = 4 - numRight - numWrong;
             }
         }//end for loop
-        console.log(numRight)
     }//end getScore
+
+   
 
     //On Start btn press
     $("#startBtn").click(function () {
         $("#start").hide();
         $("#quiz").show();
         //start timer right after 
+
         setTimeout(function quiz() {
             //quiz function
             $("#done").click(function () {
@@ -84,6 +89,7 @@ $(document).ready(function () {
 
         }, 1000 + 5);
     });
+    //when the DONE button is clicked, but timer has not run out:
     $("#done").click(function () {
         $("#start").hide();
         $("#quiz").hide();

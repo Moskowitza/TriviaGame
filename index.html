@@ -4,61 +4,68 @@
 <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
     crossorigin="anonymous">
+  <link rel="stylesheet" href="/Users/aaronmoskowitz/TriviaGame/assets/css/style.css">
   <title>Trivia</title>
 </head>
 
 <body>
   <!-- Start container, show at load -->
-  <div id="start">
-    <h1>Quiz Title</h1>
+  <div id="start" class="col-md-6">
+    <h1>Indie Legends of the 90s</h1>
     <!-- Indicates a successful or positive action -->
     <button id="startBtn" type="button" class="btn btn-success btn-lg">start</button>
 
   </div>
   <!-- Quiz container, hide at load -->
-  <div id="quiz">
+  <div id="quiz" class="col-md-6">
     <!-- show countdown -->
-    <div id="show-number"></div>
+    <h2 id="show-number"></h2>
     <!-- FORM name quiz -->
+
+
+<!-- jQuery Script -->
+    <!-- Start FORM -->
     <form name="quiz" action="">
       <!-- question 1 ENO-->
 
       <p>Who is your favorite pet?</p>
-      <input type="radio" name="question1" value="correct"> Eno
-      <br>
-      <input type="radio" name="question1" value="wrong"> Toki
-      <br>
-      <input type="radio" name="question1" value="wrong"> Blue
+      <input type="radio" name="question1" value="correct"> Eno |
+  
+      <input type="radio" name="question1" value="wrong"> Toki |
+
+      <input type="radio" name="question1" value="wrong"> Blue |
       <br>
       <!-- question 2 noBut-->
-
+<hr>
       <p>Do you like coffee?</p>
-      <input type="radio" name="question2" value="wrong"> yes
-      <br>
-      <input type="radio" name="question2" value="wrong"> no
-      <br>
+      <input type="radio" name="question2" value="wrong"> yes |
+
+      <input type="radio" name="question2" value="wrong"> no |
+  
       <input type="radio" name="question2" value="correct"> no, but I'm an addict
       <br>
       <!-- question 3 dog-->
-
+      <hr>
       <p>Who is the best assistant?</p>
-      <input type="radio" name="question3" value="wrong"> Alfred
-      <br>
-      <input type="radio" name="question3" value="wrong"> Siri
-      <br>
+      <input type="radio" name="question3" value="wrong"> Alfred | 
+  
+      <input type="radio" name="question3" value="wrong"> Siri |
+
       <input type="radio" name="question3" value="correct"> Dog
       <br>
       <!-- question 3 mike-->
-
+      <hr>
       <p>Who is a nunchaku master?</p>
-      <input type="radio" name="question4" value="correct"> Michalangelo
-      <br>
-      <input type="radio" name="question4" value="wrong"> Steven Seagal
-      <br>
-      <input type="radio" name="question4" value="wrong"> Kathy Ireland
-      <br>
+      <input type="radio" name="question4" value="correct"> Michalangelo |
+
+      <input type="radio" name="question4" value="wrong"> Steven Seagal |
+
+      <input type="radio" name="question4" value="wrong"> Kathy Ireland |
+
       <input type="radio" name="question4" value="wrong"> Snoop Dogg
+      <hr>
     </form>
+    <br>
     <p>
       <b>Note:</b> When a user clicks on a radio-button, it becomes checked, and all other radio-buttons with equal name become
       unchecked.
@@ -66,7 +73,7 @@
     <button id="done" type="button" class="btn btn-success btn-lg">I'm Done!</button>
   </div>
   <!-- Results container, hide at load -->
-  <div id="results">
+  <div id="results" class="col-md-6">
     <h2 id="correct"></h2>
     <h2 id="wrong">Wrong answers:</h2>
     <h2 id="unanswered">Unanswered answers:</h2>
