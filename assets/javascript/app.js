@@ -1,16 +1,13 @@
 $(document).ready(function () {
     $("#quiz").hide(); //hide these divs on load
     $("#results").hide();
-   var numRight = 0; //set right, wrong, unasnwered to zero
-   var numWrong = 0;
-   var numUnans = 0;
-   var progress = 0;
-    // var numRight = 0;
-    var number = 100;     //  Set our countdown timer to 100.
+    var numRight = 0; //set right, wrong, unasnwered to zero
+    var numWrong = 0;
+    var numUnans = 0;
+    var progress = 0;
+    var number = 45;     //  Set our countdown timer to 100.
 
-    //  Variable that will hold our interval ID when we execute
-
-    var intervalId;
+    var intervalId; //  Variable that will hold our interval ID when we execute
 
     //  the "runTimer" function 
     function runTimer() {
@@ -22,8 +19,6 @@ $(document).ready(function () {
         number--;
 
         $("#show-number").html("You have " + number + " seconds left");
-
-
         //  Once number hits zero...
         if (number === 0) {
 
@@ -57,7 +52,7 @@ $(document).ready(function () {
         numWrong = 0;
         numUnans = 0;
         progress = 0;
-        for (i = 0; i < 5; i++) { //while 'i' is less than the number of questions in our quiz
+        for (i = 0; i < 13; i++) { //while 'i' is LESS than number of questions in our quiz -1
             var radios = document.getElementsByName('question' + i); //get questions and store them in 
             for (var j = 0; j < radios.length; j++) {
                 var radio = radios[j];
@@ -67,19 +62,21 @@ $(document).ready(function () {
                 } else if (radio.value == "wrong" && radio.checked) {
                     numWrong++;
                 }
-                numUnans = 4 - numRight - numWrong;
+                numUnans = 12 - numRight - numWrong;
             }
         }//end for loop
     }//end getScore
 
-   
+
 
     //On Start btn press
     $("#startBtn").click(function () {
         $("#start").hide();
         $("#quiz").show();
+        runTimer(); //run Timer when we hit start button
         //start timer right after 
-
+        
+        $(".radio").attr('checked',false); //clear radio buttons
         setTimeout(function quiz() {
             //quiz function
             $("#done").click(function () {
