@@ -1,50 +1,48 @@
 $(document).ready(function () {
     $("#quiz").hide(); //hide these divs on load
     $("#results").hide();
-    var numRight = 0; //set right, wrong, unasnwered to zero
+
+    //set right, wrong, unasnwered counters to Zero
+    var numRight = 0; 
     var numWrong = 0;
     var numUnans = 0;
-    var progress = 0;
-    var number = 45;     //  Set our countdown timer to 100.
+    //Set our count down values
+    var number = 45;     
+    var intervalId; 
 
-    var intervalId; //  Variable that will hold our interval ID when we execute
-
-    //  the "runTimer" function 
+    //  Runtime: Clears intervalID, interval (decrement the "number variable" every ONE second
     function runTimer() {
+        number=45;
         clearInterval(intervalId);
-        //          setInterval(function, value)
         intervalId = setInterval(decrementTimer, 1000);
     }
+    //decrese number by one. 
+    //Show the count down in the DOM, 
+    //when number =0 STOP
     function decrementTimer() {
         number--;
-
         $("#show-number").html("You have " + number + " seconds left");
-        //  Once number hits zero...
         if (number === 0) {
-
-            //  ...run the stop function.
             stopTimer();
         }
     }
 
-    //  The When Time is up run same as DONE button
+    //  When time is UP:
     function stopTimer() {
+        //Swap out what is seen
         $("#start").hide();
         $("#quiz").hide();
         $("#results").show();
-        getScore()
-        clearInterval(intervalId);
+        //load get score into results
+
+        getScore();
+        
         $("#correct").html("Correct answers: " + numRight);
         $("#wrong").html("Wrong answers: " + numWrong);
         $("#unanswered").html("Unanswers: " + numUnans);
     }
-    function timer() {
-        clearInterval(intervalId);
-        intervalId = setInterval(decrementTimer, 1000);
-    }
 
-    //  Execute the run function.
-    runTimer();
+
     function getScore() {
         //put correct answers into an array
 
@@ -67,16 +65,17 @@ $(document).ready(function () {
         }//end for loop
     }//end getScore
 
-
+function clearRadio(){
+    $('input[type="radio"]').prop('checked',false); //clear radio buttons
+}
 
     //On Start btn press
     $("#startBtn").click(function () {
         $("#start").hide();
         $("#quiz").show();
-        runTimer(); //run Timer when we hit start button
-        //start timer right after 
+        runTimer();     //there seems to be a delay here
+        clearRadio();   //Clear out radio buttons
         
-        $(".radio").attr('checked',false); //clear radio buttons
         setTimeout(function quiz() {
             //quiz function
             $("#done").click(function () {
