@@ -5,7 +5,7 @@ p{
     background-blend-mode: color-burn;
 }
 body{
-    background-image: url("assets/images/guitars.jpg");
+    background-image: url("/assets/images/guitars.jpg");
 }
 div{
     background-color: sandybrown;
