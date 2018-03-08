@@ -10,21 +10,22 @@
 
 <body>
   <!-- Start container, show at load -->
-  <div id="start" class="col-md-6">
+  <div id="start" class="col-md-8">
     <h1>Indie Legends of the 90s</h1>
     <!-- Indicates a successful or positive action -->
     <button id="startBtn" type="button" class="btn btn-success btn-lg">start</button>
 
   </div>
   <!-- Quiz container, hide at load -->
-  <div id="quiz" class="col-md-6">
+  <div id="quiz" class="col-md-8">
     <!-- show countdown -->
-    <h2 id="show-number"></h2>
+    <h2 id="show-number">You have 45 seconds left
+    </h2>
     <!-- FORM name quiz -->
     <!-- jQuery Script -->
     <!-- Start FORM -->
     <form name="quiz" action="">
-      <!-- question 1 ENO-->
+      <!-- question 1-->
 
       <p>Which label did members of Superchunk form?</p>
       <input type="radio" name="question1" value="correct"> Merge Records|
@@ -124,13 +125,12 @@
     </form>
     <br>
     <p>
-      <b>Note:</b> When a user clicks on a radio-button, it becomes checked, and all other radio-buttons with equal name become
-      unchecked.
+      <b>Note:</b> When you're done you can run out the clock or click the <em>I'm Done!</em> button.
     </p>
     <button id="done" type="button" class="btn btn-success btn-lg">I'm Done!</button>
   </div>
   <!-- Results container, hide at load -->
-  <div id="results" class="col-md-6">
+  <div id="results" class="col-md-8">
     <h2 id="correct"></h2>
     <h2 id="wrong">Wrong answers:</h2>
     <h2 id="unanswered">Unanswered answers:</h2>

@@ -98,6 +98,8 @@ function clearRadio(){
     });
 
     $("#return").click(function () {
+        clearInterval(intervalId);
+        $("#show-number").html("You have 45 seconds left");
         $("#results").hide();
         $("#start").show();
     });//end return to start
